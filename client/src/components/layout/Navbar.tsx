@@ -10,29 +10,30 @@ import {
 
 export function Navbar() {
   const navLinks = [
-    { name: "// about", href: "#about" },
-    { name: "// experience", href: "#experience" },
-    { name: "// projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Education", href: "#education" },
   ];
 
   return (
     <header className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
-          <a className="font-mono font-bold text-xl tracking-tight flex items-center gap-2 group">
-            <span className="text-primary group-hover:animate-pulse">~</span>
+          <a className="font-bold text-xl tracking-tight flex items-center gap-2 group">
+            <span className="text-primary font-mono group-hover:animate-pulse">~</span>
             <span>Jaiden.W</span>
           </a>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
-          <div className="flex gap-6 font-mono text-sm">
+          <div className="flex gap-6 font-mono text-sm font-medium">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.name}
               </a>
@@ -47,7 +48,7 @@ export function Navbar() {
             <Button asChild variant="default" size="sm" className="rounded-none font-mono font-medium">
               <a href="mailto:jaiden.wilson156@gmail.com">
                 <Mail className="w-4 h-4 mr-2" />
-                Contact()
+                Contact
               </a>
             </Button>
           </div>
@@ -70,7 +71,7 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg text-muted-foreground hover:text-primary transition-colors border-b border-border pb-2"
+                  className="text-lg text-muted-foreground hover:text-foreground transition-colors border-b border-border pb-2"
                 >
                   {link.name}
                 </a>
