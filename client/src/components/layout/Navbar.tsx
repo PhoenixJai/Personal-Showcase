@@ -1,6 +1,7 @@
 import { Link } from "wouter";
-import { Github, Mail, Linkedin, Menu } from "lucide-react";
+import { Github, Mail, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import {
   Sheet,
   SheetContent,
@@ -9,43 +10,44 @@ import {
 
 export function Navbar() {
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "// about", href: "#about" },
+    { name: "// experience", href: "#experience" },
+    { name: "// projects", href: "#projects" },
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 glass-panel border-b-0 border-white/10 bg-background/40 backdrop-blur-md">
+    <header className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
-          <a className="font-display font-bold text-xl tracking-tighter hover:opacity-80 transition-opacity">
-            JW<span className="text-primary">.</span>
+          <a className="font-mono font-bold text-xl tracking-tight flex items-center gap-2 group">
+            <span className="text-primary group-hover:animate-pulse">~</span>
+            <span>Jaiden.W</span>
           </a>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          <div className="flex gap-6">
+        <nav className="hidden md:flex items-center gap-6">
+          <div className="flex gap-6 font-mono text-sm">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.name}
               </a>
             ))}
           </div>
           <div className="flex items-center gap-4 border-l border-border pl-6">
-            <a href="https://github.com/PhoenixJai" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Github className="w-5 h-5" />
+            <ThemeToggle />
+            <a href="https://github.com/PhoenixJai" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-muted rounded-none border border-transparent hover:border-border">
+              <Github className="w-4 h-4" />
               <span className="sr-only">GitHub</span>
             </a>
-            <Button asChild variant="outline" size="sm" className="rounded-full">
-              <a href="mailto:jaiden.wilson156@email.com">
+            <Button asChild variant="default" size="sm" className="rounded-none font-mono font-medium">
+              <a href="mailto:jaiden.wilson156@gmail.com">
                 <Mail className="w-4 h-4 mr-2" />
-                Hire Me
+                Contact()
               </a>
             </Button>
           </div>
@@ -53,30 +55,39 @@ export function Navbar() {
 
         {/* Mobile Nav */}
         <Sheet>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Menu className="w-5 h-5" />
-              <span className="sr-only">Toggle Menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <nav className="flex flex-col gap-6 mt-8">
+          <div className="flex items-center gap-4 md:hidden">
+            <ThemeToggle />
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="rounded-none">
+                <Menu className="w-4 h-4" />
+                <span className="sr-only">Toggle Menu</span>
+              </Button>
+            </SheetTrigger>
+          </div>
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] border-l border-border rounded-none bg-background">
+            <nav className="flex flex-col gap-6 mt-12 font-mono">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-lg text-muted-foreground hover:text-primary transition-colors border-b border-border pb-2"
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="flex gap-4 mt-4">
-                <a href="https://github.com/PhoenixJai" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Github className="w-6 h-6" />
-                </a>
-                <a href="mailto:jaiden.wilson156@email.com" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="w-6 h-6" />
-                </a>
+              <div className="flex gap-4 mt-8">
+                <Button asChild variant="outline" className="w-full justify-start rounded-none">
+                   <a href="https://github.com/PhoenixJai" target="_blank" rel="noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                    GitHub
+                  </a>
+                </Button>
+                <Button asChild variant="default" className="w-full justify-start rounded-none">
+                  <a href="mailto:jaiden.wilson156@gmail.com">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Email
+                  </a>
+                </Button>
               </div>
             </nav>
           </SheetContent>
