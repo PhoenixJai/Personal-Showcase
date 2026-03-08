@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown, Code2, Database, Layout } from "lucide-react";
+import { ArrowRight, ChevronDown, Code2, Cpu, Layout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import headshot from "@assets/headshot_Jaiden-Wilson_sq_1772998906594.jpg";
 
@@ -26,11 +26,11 @@ export function Hero() {
             
             <h1 className="text-5xl lg:text-7xl font-display font-bold leading-tight">
               Hi, I'm <span className="text-gradient">Jaiden</span><br />
-              Full-Stack Developer
+              <span className="text-3xl lg:text-5xl text-foreground/80 mt-2 block">Hardware Meets Software.</span>
             </h1>
             
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-              Electrical engineering student turning complex problems into elegant, interactive web experiences.
+              Electrical Engineering student & Full Stack Developer bridging the gap between physical systems and elegant web experiences. A CompTIA A+ certified technician and continuous learner building real-world solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
@@ -62,7 +62,7 @@ export function Hero() {
                 <Code2 className="w-6 h-6 text-indigo-400" />
               </div>
               <div className="absolute -left-6 bottom-20 z-20 glass-panel p-3 rounded-2xl animate-float animation-delay-2000">
-                <Layout className="w-6 h-6 text-pink-400" />
+                <Cpu className="w-6 h-6 text-pink-400" />
               </div>
             </div>
           </div>
