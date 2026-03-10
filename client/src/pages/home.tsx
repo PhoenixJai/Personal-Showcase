@@ -183,6 +183,9 @@ export default function Home() {
               <div className="border border-border bg-card p-6 flex flex-col group hover:border-primary transition-colors hard-shadow-sm focus-within:ring-2 focus-within:ring-primary outline-none">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-bold text-xl group-hover:text-primary transition-colors leading-tight text-foreground" data-testid="project-title-3">Simply Butterfly Solutions</h3>
+                  <a href="https://simplybutterflysolutions.replit.app/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground focus:text-primary outline-none" aria-label="View Simply Butterfly Solutions Live Site" data-testid="link-project-3">
+                    <ArrowUpRight className="w-5 h-5" aria-hidden="true" />
+                  </a>
                 </div>
                 <p className="text-sm text-muted-foreground mb-6 flex-1 leading-relaxed">
                   Delivered a high-conversion live website for a staffing company. Managed the full project lifecycle from conceptualization to deployment, strictly aligning the technical design with brand and business directives.
