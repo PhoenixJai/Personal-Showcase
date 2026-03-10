@@ -9,7 +9,7 @@ import Home from "@/pages/home";
 
 function AppRouter() {
   return (
-    <Router base="/Portfolio-Website">
+    <Router>
       <Switch>
         <Route path="/" component={Home} />
         <Route component={NotFound} />
