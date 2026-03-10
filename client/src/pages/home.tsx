@@ -1,7 +1,12 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/layout/Hero";
-import { ExternalLink, Github, Terminal, Bot, ArrowUpRight, CheckCircle2, Instagram, Facebook, Image as ImageIcon, MessageSquare } from "lucide-react";
+import { ExternalLink, Github, Terminal, Bot, ArrowUpRight, CheckCircle2, Instagram, Facebook, Image as ImageIcon, MessageSquare, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+import flyer1 from "@assets/image_1773168880055.png";
+import flyer2 from "@assets/image_1773168944882.png";
+import video1 from "@assets/CPR_Training_(Mobile_Video)_1773169258653.mp4";
+import video2 from "@assets/Happy_National_Hug_Day_From_All_Aspire_Academy_(Instagram_Vide_1773169455188.mp4";
 
 export default function Home() {
   return (
@@ -241,7 +246,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-3 gap-6 mb-12">
                 <div className="border border-border p-4 bg-muted/20 group hover:border-primary transition-colors">
                   <ImageIcon className="w-8 h-8 text-primary mb-4" aria-hidden="true" />
                   <h4 className="font-bold font-mono text-sm mb-2 text-foreground uppercase tracking-wider">Visual Branding</h4>
@@ -256,6 +261,68 @@ export default function Home() {
                   <ExternalLink className="w-8 h-8 text-primary mb-4" aria-hidden="true" />
                   <h4 className="font-bold font-mono text-sm mb-2 text-foreground uppercase tracking-wider">Campaign Tracking</h4>
                   <p className="text-sm text-muted-foreground">Monitored engagement metrics, click-through rates, and conversion funnels directly from social platforms to the main site.</p>
+                </div>
+              </div>
+
+              {/* Media Gallery */}
+              <div className="border-t border-border pt-8">
+                <h4 className="font-bold font-mono text-lg mb-6 text-foreground">Campaign Highlights</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  
+                  {/* Image 1 */}
+                  <a href="https://www.facebook.com/photo?fbid=1262356379293390&set=a.424392309756472" target="_blank" rel="noreferrer" className="group block relative aspect-[4/5] overflow-hidden border border-border bg-muted hard-shadow-sm focus:ring-2 focus:ring-primary outline-none">
+                    <img src={flyer1} alt="St. Patrick's Day Enrollment Special Flyer" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                      <div className="flex items-center gap-2 font-mono font-bold text-sm">
+                        <ExternalLink className="w-4 h-4" /> View Post
+                      </div>
+                    </div>
+                  </a>
+
+                  {/* Image 2 */}
+                  <a href="https://www.facebook.com/photo?fbid=1233888408806854&set=a.424392309756472" target="_blank" rel="noreferrer" className="group block relative aspect-[4/5] overflow-hidden border border-border bg-muted hard-shadow-sm focus:ring-2 focus:ring-primary outline-none">
+                    <img src={flyer2} alt="New Enrollment Discount Flyer" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                      <div className="flex items-center gap-2 font-mono font-bold text-sm">
+                        <ExternalLink className="w-4 h-4" /> View Post
+                      </div>
+                    </div>
+                  </a>
+
+                  {/* Video 1 */}
+                  <a href="https://www.facebook.com/reel/2675866926128558" target="_blank" rel="noreferrer" className="group block relative aspect-[4/5] overflow-hidden border border-border bg-black hard-shadow-sm focus:ring-2 focus:ring-primary outline-none">
+                    <video 
+                      src={video1} 
+                      className="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+                      muted loop playsInline autoPlay
+                    />
+                    <div className="absolute top-3 right-3 bg-background/80 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border">
+                      <Play className="w-3 h-3 text-primary fill-primary" /> Reel
+                    </div>
+                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                      <div className="flex items-center gap-2 font-mono font-bold text-sm">
+                        <ExternalLink className="w-4 h-4" /> Watch Reel
+                      </div>
+                    </div>
+                  </a>
+
+                  {/* Video 2 */}
+                  <a href="https://www.facebook.com/reel/1557872801916362" target="_blank" rel="noreferrer" className="group block relative aspect-[4/5] overflow-hidden border border-border bg-black hard-shadow-sm focus:ring-2 focus:ring-primary outline-none">
+                    <video 
+                      src={video2} 
+                      className="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+                      muted loop playsInline autoPlay
+                    />
+                    <div className="absolute top-3 right-3 bg-background/80 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border">
+                      <Play className="w-3 h-3 text-primary fill-primary" /> Reel
+                    </div>
+                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                      <div className="flex items-center gap-2 font-mono font-bold text-sm">
+                        <ExternalLink className="w-4 h-4" /> Watch Reel
+                      </div>
+                    </div>
+                  </a>
+
                 </div>
               </div>
             </div>
