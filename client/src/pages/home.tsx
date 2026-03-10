@@ -236,6 +236,24 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Proj 5 - Brandywine Survey Form */}
+              <div className="border border-border bg-card p-6 flex flex-col group hover:border-primary transition-colors hard-shadow-sm focus-within:ring-2 focus-within:ring-primary outline-none">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="font-bold text-xl group-hover:text-primary transition-colors text-foreground" data-testid="project-title-5">Post High School Survey</h3>
+                  <a href="/survey.html" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground focus:text-primary outline-none" aria-label="View Survey Form" data-testid="link-project-5">
+                    <ArrowUpRight className="w-5 h-5" aria-hidden="true" />
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground mb-6 flex-1 leading-relaxed">
+                  Developed an interactive, responsive survey form for the Brandywine School District featuring real-time input validation, dynamic progress tracking, and custom CSS styling.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-border/50" aria-label="Technologies used">
+                  <span className="text-[10px] font-mono bg-muted text-foreground px-2 py-1 uppercase font-bold">HTML5</span>
+                  <span className="text-[10px] font-mono bg-muted text-foreground px-2 py-1 uppercase font-bold">CSS3</span>
+                  <span className="text-[10px] font-mono bg-muted text-foreground px-2 py-1 uppercase font-bold">Vanilla JS</span>
+                </div>
+              </div>
+
             </div>
           </section>
 
