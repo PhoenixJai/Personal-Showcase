@@ -82,7 +82,7 @@ export function Hero() {
                   <img 
                     src={headshot} 
                     alt="Portrait of Jaiden Wilson" 
-                    className="w-full h-full object-cover object-top filter grayscale contrast-125 transition-all duration-500 group-hover:grayscale-0 group-hover:contrast-100"
+                    className="w-full h-full object-cover object-top filter dark:grayscale dark:contrast-125 transition-all duration-500 group-hover:grayscale-0 group-hover:contrast-100"
                     data-testid="img-headshot"
                   />
                </div>
