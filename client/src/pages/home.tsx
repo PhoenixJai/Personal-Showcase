@@ -7,6 +7,10 @@ import flyer1 from "@assets/image_1773168880055.png";
 import flyer2 from "@assets/image_1773168944882.png";
 import video1 from "@assets/CPR_Training_(Mobile_Video)_1773169258653.mp4";
 import video2 from "@assets/Happy_National_Hug_Day_From_All_Aspire_Academy_(Instagram_Vide_1773169455188.mp4";
+import cabraVideo1 from "@assets/AbbyPromo_1773172892879.mov";
+import cabraVideo2 from "@assets/AnsleePromo_1773172892880.mov";
+import cabraVideo3 from "@assets/CabraPromo_1773172892880.mov";
+import cabraVideo4 from "@assets/RymanPromo_1773172892880.mov";
 
 export default function Home() {
   return (
@@ -116,15 +120,32 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              
+
               {/* Exp 4 */}
+              <div className="grid md:grid-cols-[200px_1fr] gap-4 md:gap-8 group">
+                <div className="text-sm font-mono text-muted-foreground md:text-right pt-1" aria-label="Date">
+                  Aug 2024 - Oct 2024<br/>
+                  <span className="text-[10px] uppercase bg-muted text-foreground px-2 py-0.5 mt-1 inline-block font-bold tracking-wider" aria-label="Employment type: Contract">Contract</span>
+                </div>
+                <div className="border-l-2 border-border pl-6 group-hover:border-primary transition-colors pb-4">
+                  <h3 className="font-bold text-xl text-foreground" data-testid="exp-title-4">Marketing Intern</h3>
+                  <div className="text-primary font-mono text-sm mb-4" data-testid="exp-company-4">Cabra Music · Remote</div>
+                  <ul className="list-disc list-outside ml-4 space-y-3 text-muted-foreground">
+                    <li><strong>Researched</strong> social media trends and audience behavior to inform targeted content strategies.</li>
+                    <li><strong>Created and edited</strong> digital content with CapCut and Canva to promote artists and the event.</li>
+                    <li><strong>Tailored</strong> festival content to boost online engagement and visibility across multiple platforms.</li>
+                  </ul>
+                </div>
+              </div>
+              
+              {/* Exp 5 */}
               <div className="grid md:grid-cols-[200px_1fr] gap-4 md:gap-8 group">
                 <div className="text-sm font-mono text-muted-foreground md:text-right pt-1" aria-label="Date">
                   2022
                 </div>
                 <div className="border-l-2 border-border pl-6 group-hover:border-primary transition-colors">
-                  <h3 className="font-bold text-xl text-foreground" data-testid="exp-title-4">Coding Instructor</h3>
-                  <div className="text-primary font-mono text-sm mb-4" data-testid="exp-company-4">TechCore2 / Code Ninjas / Athletes Global Corp</div>
+                  <h3 className="font-bold text-xl text-foreground" data-testid="exp-title-5">Coding Instructor</h3>
+                  <div className="text-primary font-mono text-sm mb-4" data-testid="exp-company-5">TechCore2 / Code Ninjas / Athletes Global Corp</div>
                   <ul className="list-disc list-outside ml-4 space-y-3 text-muted-foreground">
                     <li><strong>Educated students on programming fundamentals</strong>, serving as a lead and assistant instructor for advanced Python, Web Development, and Game Design camps.</li>
                     <li><strong>Designed and facilitated interactive curriculum</strong>, including specialized 5-hour Scratch game development workshops.</li>
@@ -325,6 +346,76 @@ export default function Home() {
                       </div>
                     </div>
                   </a>
+
+                </div>
+              </div>
+
+              {/* Cabra Music Campaigns */}
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mt-20 mb-8 pt-12 border-t-2 border-border">
+                <div className="max-w-2xl">
+                  <h3 className="font-bold text-2xl mb-2 text-foreground" data-testid="marketing-title-2">Cabra Music Campaigns</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Created and edited digital content with CapCut and Canva to promote artists and music events. Tailored festival content to boost online engagement and visibility across multiple platforms.
+                  </p>
+                </div>
+              </div>
+
+              {/* Media Gallery Cabra */}
+              <div className="border-t border-border pt-8">
+                <h4 className="font-bold font-mono text-lg mb-6 text-foreground">Promotional Videos</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  
+                  {/* Video 1 */}
+                  <div className="group block relative aspect-[9/16] overflow-hidden border border-border bg-black hard-shadow-sm focus-within:ring-2 focus-within:ring-primary outline-none">
+                    <video 
+                      src={`${cabraVideo3}#t=0.1`}
+                      className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                      muted playsInline preload="metadata"
+                      controls
+                    />
+                    <div className="absolute top-3 right-3 bg-background/90 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border z-10 pointer-events-none transition-opacity group-hover:opacity-0">
+                      <Play className="w-3 h-3 text-primary fill-primary" /> Promo
+                    </div>
+                  </div>
+
+                  {/* Video 2 */}
+                  <div className="group block relative aspect-[9/16] overflow-hidden border border-border bg-black hard-shadow-sm focus-within:ring-2 focus-within:ring-primary outline-none">
+                    <video 
+                      src={`${cabraVideo1}#t=0.1`}
+                      className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                      muted playsInline preload="metadata"
+                      controls
+                    />
+                    <div className="absolute top-3 right-3 bg-background/90 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border z-10 pointer-events-none transition-opacity group-hover:opacity-0">
+                      <Play className="w-3 h-3 text-primary fill-primary" /> Artist
+                    </div>
+                  </div>
+
+                  {/* Video 3 */}
+                  <div className="group block relative aspect-[9/16] overflow-hidden border border-border bg-black hard-shadow-sm focus-within:ring-2 focus-within:ring-primary outline-none">
+                    <video 
+                      src={`${cabraVideo2}#t=0.1`}
+                      className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                      muted playsInline preload="metadata"
+                      controls
+                    />
+                    <div className="absolute top-3 right-3 bg-background/90 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border z-10 pointer-events-none transition-opacity group-hover:opacity-0">
+                      <Play className="w-3 h-3 text-primary fill-primary" /> Artist
+                    </div>
+                  </div>
+
+                  {/* Video 4 */}
+                  <div className="group block relative aspect-[9/16] overflow-hidden border border-border bg-black hard-shadow-sm focus-within:ring-2 focus-within:ring-primary outline-none">
+                    <video 
+                      src={`${cabraVideo4}#t=0.1`}
+                      className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                      muted playsInline preload="metadata"
+                      controls
+                    />
+                    <div className="absolute top-3 right-3 bg-background/90 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border z-10 pointer-events-none transition-opacity group-hover:opacity-0">
+                      <Play className="w-3 h-3 text-primary fill-primary" /> Artist
+                    </div>
+                  </div>
 
                 </div>
               </div>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandywine School District Survey</title>
+    <style>
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        header {
+            text-align: center;
+            background-color: yellow;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 5px;
+            border: solid 3px blue;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin-right: 8px;
+        }
+        
+        .checkbox-group, .radio-group {
+            margin: 10px 0;
+        }
+        
+        .checkbox-group label, .radio-group label {
+            font-weight: normal;
+            display: inline;
+            margin-left: 5px;
+        }
+        
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+        
+        .submit-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .success {
+            color: green;
+            font-size: 16px;
+            text-align: center;
+            padding: 15px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .progress-fill {
+            height: 20px;
+            background-color: #007bff;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .other-input {
+            display: none;
+            margin-top: 10px;
+        }
+        
+        .field-valid {
+            border-color: #28a745;
+        }
+        
+        .field-invalid {
+            border-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 id="title">Brandywine School District Post High School Survey</h1>
+        <p id="description">The district is conducting a survey to see what most of the students plan to do after high school.</p>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress">0%</div>
+    </div>
+
+    <div id="success-message" class="success" style="display: none;">
+        <h3>Thank you for your submission!</h3>
+        <p>Your survey response has been recorded successfully.</p>
+    </div>
+
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name *</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <div class="error" id="name-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label id="email-label" for="email">Email *</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div class="error" id="email-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label id="number-label" for="number">Age *</label>
+            <input type="number" name="age" id="number" placeholder="Age" min="13" max="18" required>
+            <div class="error" id="number-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="dropdown">Pick your current high school *</label>
+            <select id="dropdown" name="school" required>
+                <option disabled value="" selected>Select your school</option>
+                <option value="Mount">Mount Pleasant High School</option>
+                <option value="Brandywine">Brandywine High School</option>
+                <option value="Concord">Concord High School</option>
+            </select>
+            <div class="error" id="dropdown-error"></div>
+        </div>
+
+        <div class="form-group">
+            <p>What are your plans after you graduate? (Check all that apply) *</p>
+            <div class="checkbox-group">
+                <input name="plans" value="Go to college" type="checkbox" class="input-checkbox" id="college">
+                <label for="college">Go to college</label>
+            </div>
+            <div class="checkbox-group">
+                <input name="plans" value="Go to trade school" type="checkbox" class="input-checkbox" id="trade">
+                <label for="trade">Go to trade school</label>
+            </div>
+            <div class="checkbox-group">
+                <input name="plans" value="Get a job" type="checkbox" class="input-checkbox" id="job">
+                <label for="job">Get a job</label>
+            </div>
+            <div class="checkbox-group">
+                <input name="plans" value="Other" type="checkbox" class="input-checkbox" id="other">
+                <label for="other">Other</label>
+                <input type="text" id="other-specify" class="other-input" placeholder="Please specify...">
+            </div>
+            <div class="error" id="plans-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Any additional comments?</label>
+            <textarea id="comments" name="comment" rows="4" placeholder="Share any additional thoughts..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <p>Did you enjoy this survey? *</p>
+            <div class="radio-group">
+                <input name="feelings" value="Yes" type="radio" class="input-radio" id="yes">
+                <label for="yes">Yes</label>
+            </div>
+            <div class="radio-group">
+                <input name="feelings" value="not-sure" type="radio" class="input-radio" id="not-sure">
+                <label for="not-sure">I'm not sure</label>
+            </div>
+            <div class="radio-group">
+                <input name="feelings" value="No" type="radio" class="input-radio" id="no">
+                <label for="no">No</label>
+            </div>
+            <div class="error" id="feelings-error"></div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">Submit Survey</button>
+        </div>
+    </form>
+
+    <script>
+        // Form validation and handling
+        class SurveyForm {
+            constructor() {
+                this.form = document.getElementById('survey-form');
+                this.progressBar = document.getElementById('progress');
+                this.successMessage = document.getElementById('success-message');
+                this.totalFields = 5; // Required fields count
+                
+                this.initializeEventListeners();
+                this.updateProgress();
+            }
+
+            initializeEventListeners() {
+                // Form submission
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+                
+                // Real-time validation
+                document.getElementById('name').addEventListener('input', () => this.validateName());
+                document.getElementById('email').addEventListener('input', () => this.validateEmail());
+                document.getElementById('number').addEventListener('input', () => this.validateAge());
+                document.getElementById('dropdown').addEventListener('change', () => this.validateSchool());
+                
+                // Checkbox validation
+                const checkboxes = document.querySelectorAll('input[name="plans"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', () => this.validatePlans());
+                });
+                
+                // Radio button validation
+                const radioButtons = document.querySelectorAll('input[name="feelings"]');
+                radioButtons.forEach(radio => {
+                    radio.addEventListener('change', () => this.validateFeelings());
+                });
+                
+                // Show/hide "Other" text field
+                document.getElementById('other').addEventListener('change', (e) => {
+                    const otherInput = document.getElementById('other-specify');
+                    otherInput.style.display = e.target.checked ? 'block' : 'none';
+                    if (!e.target.checked) {
+                        otherInput.value = '';
+                    }
+                });
+                
+                // Progress tracking
+                const allInputs = this.form.querySelectorAll('input, select, textarea');
+                allInputs.forEach(input => {
+                    input.addEventListener('input', () => this.updateProgress());
+                    input.addEventListener('change', () => this.updateProgress());
+                });
+            }
+
+            validateName() {
+                const name = document.getElementById('name');
+                const error = document.getElementById('name-error');
+                
+                if (name.value.trim().length < 2) {
+                    this.showError(name, error, 'Name must be at least 2 characters long');
+                    return false;
+                } else {
+                    this.showSuccess(name, error);
+                    return true;
+                }
+            }
+
+            validateEmail() {
+                const email = document.getElementById('email');
+                const error = document.getElementById('email-error');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
+                if (!emailRegex.test(email.value)) {
+                    this.showError(email, error, 'Please enter a valid email address');
+                    return false;
+                } else {
+                    this.showSuccess(email, error);
+                    return true;
+                }
+            }
+
+            validateAge() {
+                const age = document.getElementById('number');
+                const error = document.getElementById('number-error');
+                const ageValue = parseInt(age.value);
+                
+                if (isNaN(ageValue) || ageValue < 13 || ageValue > 18) {
+                    this.showError(age, error, 'Age must be between 13 and 18');
+                    return false;
+                } else {
+                    this.showSuccess(age, error);
+                    return true;
+                }
+            }
+
+            validateSchool() {
+                const school = document.getElementById('dropdown');
+                const error = document.getElementById('dropdown-error');
+                
+                if (!school.value) {
+                    this.showError(school, error, 'Please select your school');
+                    return false;
+                } else {
+                    this.showSuccess(school, error);
+                    return true;
+                }
+            }
+
+            validatePlans() {
+                const checkboxes = document.querySelectorAll('input[name="plans"]');
+                const error = document.getElementById('plans-error');
+                const isChecked = Array.from(checkboxes).some(cb => cb.checked);
+                
+                if (!isChecked) {
+                    error.textContent = 'Please select at least one plan';
+                    return false;
+                } else {
+                    error.textContent = '';
+                    return true;
+                }
+            }
+
+            validateFeelings() {
+                const radioButtons = document.querySelectorAll('input[name="feelings"]');
+                const error = document.getElementById('feelings-error');
+                const isSelected = Array.from(radioButtons).some(rb => rb.checked);
+                
+                if (!isSelected) {
+                    error.textContent = 'Please select an option';
+                    return false;
+                } else {
+                    error.textContent = '';
+                    return true;
+                }
+            }
+
+            showError(field, errorElement, message) {
+                field.classList.remove('field-valid');
+                field.classList.add('field-invalid');
+                errorElement.textContent = message;
+            }
+
+            showSuccess(field, errorElement) {
+                field.classList.remove('field-invalid');
+                field.classList.add('field-valid');
+                errorElement.textContent = '';
+            }
+
+            updateProgress() {
+                let completedFields = 0;
+                
+                // Check each required field
+                if (document.getElementById('name').value.trim()) completedFields++;
+                if (document.getElementById('email').value.trim()) completedFields++;
+                if (document.getElementById('number').value) completedFields++;
+                if (document.getElementById('dropdown').value) completedFields++;
+                
+                // Check if any plan is selected
+                const plansChecked = document.querySelectorAll('input[name="plans"]:checked').length > 0;
+                if (plansChecked) completedFields++;
+                
+                const progress = Math.round((completedFields / this.totalFields) * 100);
+                this.progressBar.style.width = progress + '%';
+                this.progressBar.textContent = progress + '%';
+            }
+
+            collectFormData() {
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    age: document.getElementById('number').value,
+                    school: document.getElementById('dropdown').value,
+                    plans: [],
+                    comments: document.getElementById('comments').value,
+                    enjoyedSurvey: document.querySelector('input[name="feelings"]:checked')?.value
+                };
+                
+                // Collect selected plans
+                const selectedPlans = document.querySelectorAll('input[name="plans"]:checked');
+                selectedPlans.forEach(plan => {
+                    if (plan.value === 'Other') {
+                        const otherText = document.getElementById('other-specify').value;
+                        formData.plans.push(otherText ? `Other: ${otherText}` : 'Other');
+                    } else {
+                        formData.plans.push(plan.value);
+                    }
+                });
+                
+                return formData;
+            }
+
+            handleSubmit(e) {
+                e.preventDefault();
+                
+                // Run all validations
+                const isNameValid = this.validateName();
+                const isEmailValid = this.validateEmail();
+                const isAgeValid = this.validateAge();
+                const isSchoolValid = this.validateSchool();
+                const isPlansValid = this.validatePlans();
+                const isFeelingsValid = this.validateFeelings();
+                
+                const isFormValid = isNameValid && isEmailValid && isAgeValid && 
+                                  isSchoolValid && isPlansValid && isFeelingsValid;
+                
+                if (isFormValid) {
+                    // Collect and process form data
+                    const surveyData = this.collectFormData();
+                    
+                    // Simulate form submission (you would send this to your server)
+                    console.log('Survey Data:', surveyData);
+                    
+                    // Show success message
+                    this.form.style.display = 'none';
+                    this.successMessage.style.display = 'block';
+                    document.querySelector('.progress-bar').style.display = 'none';
+                    
+                    // Scroll to top to show success message
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    
+                    // Optional: Reset form after delay
+                    setTimeout(() => {
+                        if (confirm('Would you like to submit another response?')) {
+                            this.resetForm();
+                        }
+                    }, 3000);
+                } else {
+                    // Scroll to first error
+                    const firstError = document.querySelector('.field-invalid, .error:not(:empty)');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+
+            resetForm() {
+                this.form.reset();
+                this.form.style.display = 'block';
+                this.successMessage.style.display = 'none';
+                document.querySelector('.progress-bar').style.display = 'block';
+                
+                // Clear all validation classes and errors
+                const fields = this.form.querySelectorAll('input, select');
+                fields.forEach(field => {
+                    field.classList.remove('field-valid', 'field-invalid');
+                });
+                
+                const errors = this.form.querySelectorAll('.error');
+                errors.forEach(error => {
+                    error.textContent = '';
+                });
+                
+                // Hide other input
+                document.getElementById('other-specify').style.display = 'none';
+                
+                this.updateProgress();
+            }
+        }
+
+        // Initialize the form when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new SurveyForm();
+        });
+    </script>
+</body>
+</html>
