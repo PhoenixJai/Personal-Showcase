@@ -292,16 +292,16 @@ export default function Home() {
                   {/* Video 1 */}
                   <a href="https://www.facebook.com/reel/2675866926128558" target="_blank" rel="noreferrer" className="group block relative aspect-[4/5] overflow-hidden border border-border bg-black hard-shadow-sm focus:ring-2 focus:ring-primary outline-none">
                     <video 
-                      src={video1} 
-                      className="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-                      muted loop playsInline autoPlay
+                      src={`${video1}#t=0.1`}
+                      className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                      muted playsInline preload="metadata"
                     />
-                    <div className="absolute top-3 right-3 bg-background/80 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border">
+                    <div className="absolute top-3 right-3 bg-background/90 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border z-10">
                       <Play className="w-3 h-3 text-primary fill-primary" /> Reel
                     </div>
-                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm z-20">
                       <div className="flex items-center gap-2 font-mono font-bold text-sm">
-                        <ExternalLink className="w-4 h-4" /> Watch Reel
+                        <ExternalLink className="w-4 h-4" /> Watch on Facebook
                       </div>
                     </div>
                   </a>
@@ -309,16 +309,16 @@ export default function Home() {
                   {/* Video 2 */}
                   <a href="https://www.facebook.com/reel/1557872801916362" target="_blank" rel="noreferrer" className="group block relative aspect-[4/5] overflow-hidden border border-border bg-black hard-shadow-sm focus:ring-2 focus:ring-primary outline-none">
                     <video 
-                      src={video2} 
-                      className="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-                      muted loop playsInline autoPlay
+                      src={`${video2}#t=0.1`}
+                      className="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                      muted playsInline preload="metadata"
                     />
-                    <div className="absolute top-3 right-3 bg-background/80 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border">
+                    <div className="absolute top-3 right-3 bg-background/90 backdrop-blur-sm px-2 py-1 flex items-center gap-1 font-mono text-[10px] uppercase font-bold border border-border z-10">
                       <Play className="w-3 h-3 text-primary fill-primary" /> Reel
                     </div>
-                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm z-20">
                       <div className="flex items-center gap-2 font-mono font-bold text-sm">
-                        <ExternalLink className="w-4 h-4" /> Watch Reel
+                        <ExternalLink className="w-4 h-4" /> Watch on Facebook
                       </div>
                     </div>
                   </a>
