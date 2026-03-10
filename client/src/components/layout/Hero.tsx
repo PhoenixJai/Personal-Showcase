@@ -63,8 +63,8 @@ export function Hero() {
                   <div className="text-xs text-muted-foreground uppercase tracking-wider font-bold mt-1">Years IT Exp</div>
                </div>
                <div>
-                  <div className="text-2xl font-bold font-mono text-primary" data-testid="text-stat-projects">5+</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider font-bold mt-1">Projects Shipped</div>
+                  <div className="text-2xl font-bold font-mono text-primary" data-testid="text-stat-projects">4</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider font-bold mt-1">Total Projects</div>
                </div>
                <div className="col-span-2 sm:col-span-2 flex items-center gap-3 border-l border-border pl-4">
                   <div className="flex flex-col gap-2">
