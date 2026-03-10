@@ -210,6 +210,57 @@ export default function Home() {
             </div>
           </section>
 
+          {/* CONTENT & MARKETING SECTION */}
+          <section id="marketing" className="mb-24 scroll-mt-24" aria-labelledby="marketing-heading">
+            <div className="flex items-center gap-4 mb-8">
+              <h2 id="marketing-heading" className="text-2xl font-bold font-mono tracking-tight uppercase">Social Media & Content</h2>
+              <div className="h-px bg-border flex-1" aria-hidden="true"></div>
+            </div>
+
+            <div className="border border-border bg-card p-6 md:p-8 hard-shadow-sm mb-8 focus-within:ring-2 focus-within:ring-primary outline-none" tabIndex={0}>
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
+                <div className="max-w-2xl">
+                  <h3 className="font-bold text-2xl mb-2 text-foreground" data-testid="marketing-title">All Aspire Academy Campaigns</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Spearheaded the digital marketing strategy, creating engaging multimedia content to drive enrollment and build community trust. Developed brand guidelines, managed daily posting schedules, and actively engaged with the target demographic across major social platforms.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-4 shrink-0">
+                  <Button asChild variant="outline" className="rounded-none font-mono border-foreground hover:bg-foreground hover:text-background transition-colors">
+                    <a href="https://www.instagram.com/allaspirede/" target="_blank" rel="noreferrer" data-testid="link-instagram">
+                      <Instagram className="w-4 h-4 mr-2" aria-hidden="true" />
+                      Instagram
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="rounded-none font-mono border-foreground hover:bg-foreground hover:text-background transition-colors">
+                    <a href="https://www.facebook.com/AllAspireAcademy/" target="_blank" rel="noreferrer" data-testid="link-facebook">
+                      <Facebook className="w-4 h-4 mr-2" aria-hidden="true" />
+                      Facebook
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div className="border border-border p-4 bg-muted/20 group hover:border-primary transition-colors">
+                  <ImageIcon className="w-8 h-8 text-primary mb-4" aria-hidden="true" />
+                  <h4 className="font-bold font-mono text-sm mb-2 text-foreground uppercase tracking-wider">Visual Branding</h4>
+                  <p className="text-sm text-muted-foreground">Designed cohesive graphical assets, promotional flyers, and educational infographics tailored for parental audiences.</p>
+                </div>
+                <div className="border border-border p-4 bg-muted/20 group hover:border-primary transition-colors">
+                  <MessageSquare className="w-8 h-8 text-primary mb-4" aria-hidden="true" />
+                  <h4 className="font-bold font-mono text-sm mb-2 text-foreground uppercase tracking-wider">Copywriting</h4>
+                  <p className="text-sm text-muted-foreground">Crafted compelling captions and ad copy focused on early childhood development milestones and center highlights.</p>
+                </div>
+                <div className="border border-border p-4 bg-muted/20 group hover:border-primary transition-colors">
+                  <ExternalLink className="w-8 h-8 text-primary mb-4" aria-hidden="true" />
+                  <h4 className="font-bold font-mono text-sm mb-2 text-foreground uppercase tracking-wider">Campaign Tracking</h4>
+                  <p className="text-sm text-muted-foreground">Monitored engagement metrics, click-through rates, and conversion funnels directly from social platforms to the main site.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* EDUCATION SECTION */}
           <section id="education" className="mb-12 scroll-mt-24" aria-labelledby="education-heading">
              <div className="flex items-center gap-4 mb-8">

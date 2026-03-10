@@ -13,6 +13,7 @@ export function Navbar() {
     { name: "Skills", href: "#skills" },
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
+    { name: "Content", href: "#marketing" },
     { name: "Education", href: "#education" },
   ];
 
