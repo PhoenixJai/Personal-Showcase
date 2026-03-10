@@ -260,7 +260,7 @@ export default function Home() {
                 <div className="border border-border p-4 bg-muted/20 group hover:border-primary transition-colors">
                   <ExternalLink className="w-8 h-8 text-primary mb-4" aria-hidden="true" />
                   <h4 className="font-bold font-mono text-sm mb-2 text-foreground uppercase tracking-wider">Campaign Tracking</h4>
-                  <p className="text-sm text-muted-foreground">Monitored engagement metrics, click-through rates, and conversion funnels directly from social platforms to the main site.</p>
+                  <p className="text-sm text-muted-foreground">Monitored campaign performance and conversion funnels primarily utilizing Google Ads to drive targeted enrollment traffic.</p>
                 </div>
               </div>
 
