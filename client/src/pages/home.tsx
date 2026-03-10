@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/layout/Hero";
-import { ExternalLink, Github, Terminal, Bot, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ExternalLink, Github, Terminal, Bot, ArrowUpRight, CheckCircle2, Instagram, Facebook, Image as ImageIcon, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
