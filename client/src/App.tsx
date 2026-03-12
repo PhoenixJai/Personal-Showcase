@@ -8,9 +8,9 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 
 function AppRouter() {
-  const base = import.meta.env.BASE_URL;
+  const base = "/Personal-Showcase";
   return (
-    <Router base={base === "/" ? undefined : base}>
+    <Router base={base}>
       <Switch>
         <Route path="/" component={Home} />
         <Route component={NotFound} />
