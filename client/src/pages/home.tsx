@@ -240,7 +240,7 @@ export default function Home() {
               <div className="border border-border bg-card p-6 flex flex-col group hover:border-primary transition-colors hard-shadow-sm focus-within:ring-2 focus-within:ring-primary outline-none">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-bold text-xl group-hover:text-primary transition-colors text-foreground" data-testid="project-title-5">Post High School Survey</h3>
-                  <a href="/survey.html" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground focus:text-primary outline-none" aria-label="View Survey Form" data-testid="link-project-5">
+                  <a href="survey.html" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground focus:text-primary outline-none" aria-label="View Survey Form" data-testid="link-project-5">
                     <ArrowUpRight className="w-5 h-5" aria-hidden="true" />
                   </a>
                 </div>
