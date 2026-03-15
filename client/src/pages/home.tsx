@@ -47,6 +47,7 @@ export default function Home() {
                   <li className="flex items-center gap-2" data-testid="skill-backend-node"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> Node.js</li>
                   <li className="flex items-center gap-2" data-testid="skill-backend-express"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> Express.js</li>
                   <li className="flex items-center gap-2" data-testid="skill-backend-mongo"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> MongoDB (Mongoose)</li>
+                  <li className="flex items-center gap-2" data-testid="skill-backend-airtable"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> AirTable</li>
                   <li className="flex items-center gap-2" data-testid="skill-backend-api"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> RESTful APIs</li>
                 </ul>
               </div>
@@ -55,6 +56,8 @@ export default function Home() {
                 <h3 className="font-bold text-lg mb-4 border-b border-border pb-2">Tools & Hardware</h3>
                 <ul className="space-y-2 font-mono text-sm text-muted-foreground" aria-label="Tools and Hardware">
                   <li className="flex items-center gap-2" data-testid="skill-tools-git"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> Git & GitHub</li>
+                  <li className="flex items-center gap-2" data-testid="skill-tools-vercel"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> Vercel</li>
+                  <li className="flex items-center gap-2" data-testid="skill-tools-zapier"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> Zapier</li>
                   <li className="flex items-center gap-2" data-testid="skill-tools-comptia"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> CompTIA A+ Certified</li>
                   <li className="flex items-center gap-2" data-testid="skill-tools-hardware"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> PC Hardware Repair</li>
                   <li className="flex items-center gap-2" data-testid="skill-tools-scripting"><CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" /> Bash & PowerShell</li>
@@ -254,6 +257,25 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Proj 6 - Portfolio Website */}
+              <div className="border border-border bg-card p-6 flex flex-col group hover:border-primary transition-colors hard-shadow-sm focus-within:ring-2 focus-within:ring-primary outline-none">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="font-bold text-xl group-hover:text-primary transition-colors text-foreground" data-testid="project-title-6">Portfolio Website</h3>
+                  <a href="https://github.com/PhoenixJai" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground focus:text-primary outline-none" aria-label="View Portfolio Repo" data-testid="link-project-6">
+                    <Github className="w-5 h-5" aria-hidden="true" />
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground mb-6 flex-1 leading-relaxed">
+                  Developed a personal portfolio site to showcase coding projects and professional experience.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-border/50" aria-label="Technologies used">
+                  <span className="text-[10px] font-mono bg-muted text-foreground px-2 py-1 uppercase font-bold">HTML</span>
+                  <span className="text-[10px] font-mono bg-muted text-foreground px-2 py-1 uppercase font-bold">CSS</span>
+                  <span className="text-[10px] font-mono bg-muted text-foreground px-2 py-1 uppercase font-bold">JavaScript</span>
+                  <span className="text-[10px] font-mono bg-muted text-foreground px-2 py-1 uppercase font-bold">GitHub</span>
+                </div>
+              </div>
+
             </div>
           </section>
 
@@ -292,7 +314,8 @@ export default function Home() {
                 <div className="border border-border p-4 bg-muted/20 group hover:border-primary transition-colors">
                   <ImageIcon className="w-8 h-8 text-primary mb-4" aria-hidden="true" />
                   <h4 className="font-bold font-mono text-sm mb-2 text-foreground uppercase tracking-wider">Visual Branding</h4>
-                  <p className="text-sm text-muted-foreground">Designed cohesive graphical assets, promotional flyers, and educational infographics tailored for parental audiences.</p>
+                  <p className="text-sm text-muted-foreground mb-2">Designed cohesive graphical assets, promotional flyers, and educational infographics tailored for parental audiences.</p>
+                  <p className="text-xs font-mono text-foreground"><strong>Design Tools:</strong> Canva, CapCut, InShot</p>
                 </div>
                 <div className="border border-border p-4 bg-muted/20 group hover:border-primary transition-colors">
                   <MessageSquare className="w-8 h-8 text-primary mb-4" aria-hidden="true" />
@@ -461,11 +484,25 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">Hands-on training in full-stack JavaScript. Building web apps using React, Node.js, Express, and MongoDB.</p>
               </div>
 
-              <div className="border border-border p-6 bg-muted/30 md:col-span-2 focus-within:ring-2 focus-within:ring-primary rounded-sm transition-all" tabIndex={0}>
+              <div className="border border-border p-6 bg-muted/30 focus-within:ring-2 focus-within:ring-primary rounded-sm transition-all" tabIndex={0}>
                 <h3 className="font-bold text-lg text-foreground" data-testid="edu-degree-3">IT Support Specialist</h3>
                 <div className="text-primary font-mono text-sm mb-2" data-testid="edu-school-3">Tech Impact ITWORKS</div>
                 <p className="text-sm text-muted-foreground mb-2">Feb 2025 – June 2025 (480 hours)</p>
                 <p className="text-sm text-muted-foreground">Hands-on training in PC troubleshooting, networking, cybersecurity essentials, and scripting (JavaScript, Python, Bash, PowerShell).</p>
+              </div>
+
+              <div className="border border-border p-6 bg-muted/30 focus-within:ring-2 focus-within:ring-primary rounded-sm transition-all" tabIndex={0}>
+                <h3 className="font-bold text-lg text-foreground" data-testid="edu-degree-4">IT Pre-Apprenticeship</h3>
+                <div className="text-primary font-mono text-sm mb-2" data-testid="edu-school-4">NERDiT Cares</div>
+                <p className="text-sm text-muted-foreground mb-2">July 2022 – Sep 2022 (360 hours)</p>
+                <p className="text-sm text-muted-foreground">Completed project-based IT support training covering hardware repair, OS installation, and networking fundamentals.</p>
+              </div>
+
+              <div className="border border-border p-6 bg-muted/30 md:col-span-2 focus-within:ring-2 focus-within:ring-primary rounded-sm transition-all" tabIndex={0}>
+                <h3 className="font-bold text-lg text-foreground" data-testid="edu-degree-5">National Cyber Scholar Finalist</h3>
+                <div className="text-primary font-mono text-sm mb-2" data-testid="edu-school-5">CyberStart America</div>
+                <p className="text-sm text-muted-foreground mb-2">Oct 2021 – Apr 2022</p>
+                <p className="text-sm text-muted-foreground">Ranked among top competitors nationwide in ethical hacking, cryptography, and network security.</p>
               </div>
             </div>
           </section>
