@@ -533,7 +533,7 @@ export default function Home() {
               <div className="border border-border bg-card p-4 text-left flex gap-4 max-w-xl mx-auto" role="note" aria-label="AI Transparency Note">
                 <Bot className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                 <div className="text-muted-foreground">
-                  <strong className="text-foreground">Transparency Note:</strong> This portfolio was rapidly prototyped in collaboration with an AI assistant to demonstrate proficiency in prompt engineering, technical communication, and modern tooling workflows.
+                  <strong className="text-foreground">Transparency Note:</strong> Built with AI-assisted tooling to demonstrate proficiency in prompt engineering, technical communication, and modern development workflows.
                 </div>
               </div>
               
